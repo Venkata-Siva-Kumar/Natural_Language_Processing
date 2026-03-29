@@ -71,8 +71,8 @@ prep = input("Enter the Preposition : ")
 
 n = elem_count.get(noun,0)
 v = elem_count.get(verb,0)
-p_n =bigram_count.get((prep,noun),0)
-p_v =bigram_count.get((prep,verb),0)
+p_n =bigram_count.get((noun,prep),0)
+p_v =bigram_count.get((verb,prep),0)
 n,v,p_n,p_v
 
 
