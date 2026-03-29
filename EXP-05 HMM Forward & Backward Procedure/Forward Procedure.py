@@ -40,7 +40,7 @@ def forward(states,obs_seq,pi,trans,emiss):
             sum_prev = 0
             for j, state_j in enumerate(states):
                 sum_prev += alpha[j, t-1] * trans[state_j][state_i]
-                alpha[i, t] = sum_prev * emiss[state_i][obs_seq[t]]
+            alpha[i, t] = sum_prev * emiss[state_i][obs_seq[t]]
     prob = alpha[0,T-1]+alpha[1,T-1]
     return alpha, prob
 
